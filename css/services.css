@@ -1,0 +1,124 @@
+:root {
+  --main-color: #e9c664;
+  --main-color-alt: #ececec;
+  --main-transition: 0.3s;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --section-background: #e9c664;
+}
+
+.backgroundPricelist{
+  background-image:url(../images/pricelist\ bg.jpg);
+   min-height: 1000px;
+   background-repeat: no-repeat ;
+   background-size: cover;
+ }
+ .ServicesTitle{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: var(--main-color);
+  font-size: 75px;
+
+}
+@media (max-width:767px){
+  .ServicesTitle{
+    font-size: 50px;
+    margin-top: -100px;
+    
+  }
+  .backgroundPricelist{
+    background-image:url(../images/pricelis\ bg.jpg);
+    min-height: 600px;
+    min-width: 400px;
+    background-repeat: no-repeat ;
+    background-size: cover;
+   }
+}
+/*Service section*/
+.services {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: transparent;
+}
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.services .box {
+  background-color: #e9c664;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  counter-increment: services;
+  transition: var(--main-transition);
+  position: relative;
+}
+.services .box::before {
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  top: -3px;
+  background-color: var(--main-color);
+  position: absolute;
+  width: 0;
+  transition: var(--main-transition);
+}
+.services .box:hover {
+  transform: translateY(-10px);
+}
+.services .box:hover::before {
+  width: 100%;
+}
+.services .box > i {
+  margin: 30px auto 20px;
+  display: block;
+  text-align: center;
+  color: #111111;
+}
+.services .box > h3 {
+  text-align: left;
+  margin: 20px 0 40px;
+  font-size: 25px;
+  color: #2c2c2c;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+.services .box .info {
+  padding: 15px;
+  position: relative;
+  background-color: #e9c664;
+  text-align: right;
+}
+.services .box .info::before {
+  content: "0" counter(services);
+  position: absolute;
+  background-color: white;
+  color: #2c2c2c;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15px;
+}
+.services .box .info::after {
+  content: "";
+  position: absolute;
+  background-color: #2c2c2c;
+  top: 0;
+  left: 60px;
+  width: 50px;
+  height: calc(100% + 0.4px);
+  transform: skewX(-30deg);
+}
+
+/* End Services */

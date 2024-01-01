@@ -1,0 +1,126 @@
+
+.backgroundContactUs{
+    background-image:url(../images/contactus.jpg);
+     min-height: 900px;
+    
+     background-repeat: no-repeat ;
+     background-size: cover;
+   }
+   .ContactUsTitle{
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     position: absolute;
+     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     color: #e9c664;
+     font-size: 75px;
+   
+   }
+   @media (max-width: 800px) {
+   .backgroundContactUs{
+    background-image:url(../images/conact\ mobile.jpg);
+    min-height: 800px;
+    min-width: 400px;
+    background-repeat: no-repeat ;
+    background-size: cover;
+   }
+    .ContactUsTitle{
+    font-size: 50px;
+      margin-top: -100px;
+  }
+
+  }
+   .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+   .mailIcon , .phoneIcon{
+    max-width:120px;
+    max-height: 90px;
+   }
+   
+   @media (max-width: 800px) {
+    
+     .row {
+      display: block;
+     }
+   }
+
+  
+  .card {
+  border: none;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px #e9c664;
+   transition: box-shadow .3s;
+   background-color: #2c2c2c;
+   }
+   
+   .card:hover {
+   box-shadow: 0 4px 6px #ececec;
+   
+   }
+   
+   
+   
+   .card-body {
+   text-align: center;
+   color: #e9c664;
+   padding: 0 px !important;
+   }
+    
+   .card-title {
+   font-weight: bold;
+   margin-bottom: 1rem;
+   color: #ececec;
+   }
+   .box p{
+     color: #e9c664;
+   }
+   .box p:hover{
+     color: #242424;
+   }
+   .box p:after{
+     color: #242424;
+   }
+     /*contact numbers*/
+  .contactNumber{
+    margin-top: 200px;
+  }
+  .contactNumber .card{
+border: 1px solid #e9c664;
+  }
+
+  .getApp{
+    background-color: #e9c664;
+    width: 100%;
+    display: block;
+    
+  }
+  .getApp:hover{
+    background-color: #645944;
+    font-size: larger;
+    border: #645944 solid;
+  }
+  .number{
+    color: #e9c664;
+  }
+  .getApp,.form-control,.text-center
+{
+min-width:250px ;
+
+  }
+  @media (max-wdth:500px) {
+    .main-title{
+      font-size: 30px;
+
+
+    }
+  p.text-center{
+    width: 200px;
+  }
+
+  }
